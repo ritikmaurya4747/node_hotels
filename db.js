@@ -1,37 +1,72 @@
-//first mongoose import
+// //first mongoose import
+// const mongoose = require('mongoose');
+// require('dotenv').config();
+
+// //Define the hotels connection URL
+// const mongoURL = process.env.MONGODB_URL;
+// // const mongoURL = process.env.MONGODB_URL_LOCAL;
+
+
+// //pass parameter inside curly braces  //Set up MongoDB connection 
+// mongoose.connect(mongoURL,{
+//     useNewUrlParser: true,     //this is saying mongourl is new connection
+//     useUnifiedTopology: true,   //this line is mandatory
+//     ssl: false,
+// })
+// //
+// //Get the default connection
+// //Mongoose maintains a default connection representing the MongoDB connection
+// const db = mongoose.connection;
+
+// //Define event listeners for database connection
+// db.on('connected',()=>{
+//     console.log('Connected to MongoDB server');
+    
+// })
+// //When occours error
+// db.on('error', (err)=>{
+//     console.log('MongoDB connection error',err);
+// })
+// //When disconnected
+// db.on('disconnected', ()=>{
+//     console.log('MongoDB disconnected',);
+    
+// })
+
+// //Export the database connection
+// module.exports = db;
+
+
+
+// *****************************
+// Mongoose import
 const mongoose = require('mongoose');
 require('dotenv').config();
 
-//Define the hotels connection URL
+// Define the MongoDB connection URL
 const mongoURL = process.env.MONGODB_URL;
-// const mongoURL = process.env.MONGODB_URL_LOCAL;
 
+// Set up MongoDB connection 
+mongoose.connect(mongoURL, {
+    useUnifiedTopology: true,   // This is mandatory
+    ssl: true,   // Use SSL for Atlas connections
+});
 
-//pass parameter inside curly braces  //Set up MongoDB connection 
-mongoose.connect(mongoURL,{
-    useNewUrlParser: true,     //this is saying mongourl is new connection
-    useUnifiedTopology: true,   //this line is mandatory
-    ssl: false,
-})
-//
-//Get the default connection
-//Mongoose maintains a default connection representing the MongoDB connection
+// Get the default connection
 const db = mongoose.connection;
 
-//Define event listeners for database connection
-db.on('connected',()=>{
+// Define event listeners for database connection
+db.on('connected', () => {
     console.log('Connected to MongoDB server');
-    
-})
-//When occours error
-db.on('error', (err)=>{
-    console.log('MongoDB connection error',err);
-})
-//When disconnected
-db.on('disconnected', ()=>{
-    console.log('MongoDB disconnected',);
-    
-})
+});
 
-//Export the database connection
+db.on('error', (err) => {
+    console.log('MongoDB connection error:', err);
+});
+
+db.on('disconnected', () => {
+    console.log('MongoDB disconnected');
+});
+
+// Export the database connection
 module.exports = db;
