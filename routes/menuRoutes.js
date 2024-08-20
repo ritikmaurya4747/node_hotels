@@ -1,8 +1,6 @@
 const express = require('express');
 const router= express.Router();
 const MenuItem = require('./../models/Menu');
-// const { route } = require('./personRoutes');
-// const { update } = require('lodash');
 
 //GET method to get the Menu Item
 router.post('/',async (req,res)=>{

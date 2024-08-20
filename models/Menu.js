@@ -30,5 +30,5 @@ const menuItemSchema = new mongoose.Schema({
 })
 
 //Create model Menu
-const menuItems = mongoose.model('ritik',menuItemSchema);
+const menuItems = mongoose.model('menuItem',menuItemSchema);
 module.exports = menuItems;

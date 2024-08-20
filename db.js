@@ -2,8 +2,10 @@
 const mongoose = require('mongoose');
 
 //Define the hotels connection URL
-//Replace 'mydatabase' with your hotels name anything 
-const mongoURL = 'mongodb://localhost:27017/hotels'
+//Replace 'mydatabase' with your hotels name anything  local
+// const mongoURL = 'mongodb://localhost:27017/hotels'
+
+const mongoURL = 'mongodb+srv://ritikmaurya4747:Ritik%40mongodb@cluster0.9t7p4.mongodb.net/'
 
 //pass parameter inside curly braces\
 //Set up MongoDB connection 
