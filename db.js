@@ -13,7 +13,7 @@ mongoose.connect(mongoURL,{
     useUnifiedTopology: true,   //this line is mandatory
     ssl: false,
 })
-
+//
 //Get the default connection
 //Mongoose maintains a default connection representing the MongoDB connection
 const db = mongoose.connection;
