@@ -34,7 +34,7 @@ module.exports = passport;
 // // Login ---- maurya    //
 // // jnsjksjkjnkjnksljnkk   ---- extract salt  // ishme se sahi password nikalega
 
-// // salt + maurya  --- hash ---- fbjhfsjhufuifuiyuj  // salt+maurya ko hash me convert kiya ab line 33 wala hash me mila ke check karega agar dono sahi raha to password correct ho jayega 
+// // salt + maurya  --- hash ---- fbjhfsjhufuifuiyuj  // salt+maurya ko hash me convert kiya ab line 33 wala hash me mila ke check karega agar dono sahi raha to password correct ho jayega.
 
 
 
