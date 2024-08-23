@@ -2,13 +2,14 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
 
-//Define the hotels connection URL
-const mongoURL = process.env.MONGODB_URL;
-// const mongoURL = process.env.MONGODB_URL_LOCAL;
+//Define the hotels connection URL*************
+
+const mongoURL = process.env.MONGODB_URL_LOCAL;
+// const mongoURL = process.env.MONGODB_URL;
 
 
 //pass parameter inside curly braces  //Set up MongoDB connection 
-mongoose.connect(mongoURL)
+mongoose.connect(mongoURL);
 
 //Get the default connection
 //Mongoose maintains a default connection representing the MongoDB connection

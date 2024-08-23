@@ -2,7 +2,7 @@ const express = require('express');
 const router= express.Router();
 const MenuItem = require('./../models/Menu');
 
-//GET method to get the Menu Item
+
 router.post('/',async (req,res)=>{
     try {
         const data = req.body;
@@ -89,6 +89,5 @@ router.delete('/:id',async(req,res)=>{
     }
 })
 
-//comment added for testing purpose
 module.exports = router;
 
