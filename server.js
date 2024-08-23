@@ -30,7 +30,7 @@ const menuRoutes = require('./routes/menuRoutes')
 
 //Usse the routers
 app.use('/person', personRoutes);
-app.use('/menu', menuRoutes);
+app.use('/menu',menuRoutes);
 
 
 app.listen(PORT, ()=>{
